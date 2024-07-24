@@ -1,0 +1,21 @@
+<!-- views/fruits/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <a href="/planets/">Back to plants</a>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= planet.name %></title> 
+  </head>
+  <body>
+    <h1><%= planet.name %></h1> 
+    <!-- delete button -->
+<form action="/planets/<%=planet._id%>?_method=DELETE" method="POST">
+    <button type="submit">Delete <%= planet.name %></button>
+  </form>
+  <a href="/planets/<%= planet._id %>/edit">Edit <%= planet.name %></a>
+
+  <a href="/planets">Back to planets</a>
+  </body>
+</html>

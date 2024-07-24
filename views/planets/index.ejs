@@ -1,0 +1,27 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planets Index</title>
+  
+<a href="/planets/new">Add New Planets</a>
+
+<a href="/planets/">Back to planets</a>
+  </head>
+
+
+<body>
+    <h1>All Planets</h1>
+    <ul>
+      <% planet.forEach(planet => { %>
+        <li>   <a href="/planets/<%= planet._id %>"> <%= planet.name %> </a></li>
+        <li><%= planet.description %></li>
+
+      <% }); %>
+    </ul>
+  </body>
+  
+</html>
